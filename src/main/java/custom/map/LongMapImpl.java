@@ -67,9 +67,6 @@ public class LongMapImpl<V> implements LongMap<V> {
     }
 
     public V get(long key) {
-//        if (itemsCount == 0) {
-//            return null;
-//        }
         int pos = Arrays.binarySearch(keys, 0, itemsCount, key);
         if (pos < 0 || pos == itemsCount) {
             return null;
@@ -79,9 +76,6 @@ public class LongMapImpl<V> implements LongMap<V> {
     }
 
     public V remove(long key) {
-//        if (itemsCount == 0) {
-//            return null;
-//        }
         int pos = Arrays.binarySearch(keys, 0, itemsCount, key);
         if (pos < 0 || pos == itemsCount) {
             return null;
@@ -98,9 +92,6 @@ public class LongMapImpl<V> implements LongMap<V> {
     }
 
     public boolean containsKey(long key) {
-//        if (itemsCount == 0) {
-//            return false;
-//        }
         int pos = Arrays.binarySearch(keys, 0, itemsCount, key);
         return pos >= 0 && pos != itemsCount;
     }
