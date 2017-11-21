@@ -58,7 +58,7 @@ public class LongMapImpl<V> implements LongMap<V> {
             values[pos] = value;
         } else {
             Object oldValue = values[pos];
-            values[pos] = values;
+            values[pos] = value;
             return (V) oldValue;
         }
         itemsCount++;
